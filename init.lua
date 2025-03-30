@@ -660,7 +660,7 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         gopls = {},
-        -- pyright = {},
+        pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -1023,5 +1023,7 @@ require('lazy').setup({
 require('nvim-treesitter.install').compilers = { 'clang' }
 vim.wo.relativenumber = true
 vim.cmd 'set so=99999999'
+require 'custom.plugins'
+vim.api.nvim_set_keymap('n', '<Leader>u', '<cmd>lua require("switch-case").switch_case()<CR>', { noremap = true, silent = true })
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
