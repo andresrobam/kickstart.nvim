@@ -1,3 +1,43 @@
+-- local function isAllowedChar(ch, nextToSeparator)
+--   if nextToSeparator then
+--     return ch:find('[A-Za-z]')
+--   else
+--     return ch:find('[A-Za-z_-]')
+--   end
+-- end
+--
+-- local function isSeparator(ch)
+--   return ch == '-' or ch == '_'
+-- end
+--
+-- local function getWord(line, column)
+--   local ch = line:sub(column, column)
+--   if not isAllowedChar(ch, false) then
+--     return ''
+--   end
+--   local out = ch
+--   local sep = isSeparator(ch)
+--   for i = column + 1, #line do
+--     ch = line:sub(i, i)
+--     if isAllowedChar(ch, sep) then
+--       out = out .. ch
+--       sep = isSeparator(ch)
+--     else
+--       break
+--     end
+--   end
+--   for i = column - 1, 1, -1 do
+--     ch = line:sub(i, i)
+--     if isAllowedChar(ch, sep) then
+--       out = ch .. out
+--       sep = isSeparator(ch)
+--     else
+--       break
+--     end
+--   end
+--   return out
+-- end
+
 local function switch_case()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
   local word = vim.fn.expand '<cword>'
