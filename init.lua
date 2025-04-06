@@ -275,7 +275,7 @@ require('lazy').setup({
       },
     },
   },
-
+  { 'https://github.com/github/copilot.vim' },
   { 'cohama/lexima.vim' },
   ---@type LazySpec
   {
