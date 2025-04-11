@@ -1096,6 +1096,13 @@ require('lazy').setup({
 require('nvim-treesitter.install').compilers = { 'clang' }
 vim.wo.relativenumber = true
 vim.cmd 'set so=99999999'
-vim.api.nvim_set_keymap('n', '<Leader>u', '<cmd>lua require("custom/plugins/switch-case").switch_case()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+  'n',
+  '<Leader>u',
+  '<cmd>lua require("custom/plugins/switch-case").switch_case()<CR>',
+  { noremap = true, silent = true, desc = 'Switch case' }
+)
+vim.api.nvim_set_keymap('n', '<Leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true, desc = 'Show diagnostics' })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
