@@ -275,7 +275,7 @@ require('lazy').setup({
       },
     },
   },
-  { 'https://github.com/github/copilot.vim' },
+  -- { 'https://github.com/github/copilot.vim' },
   { 'cohama/lexima.vim' },
   ---@type LazySpec
   {
@@ -711,6 +711,7 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         gopls = {},
+        ruby_lsp = {},
         pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -725,7 +726,7 @@ require('lazy').setup({
         jdtls = {},
         clangd = {},
         terraformls = {},
-
+        svelte = {},
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
