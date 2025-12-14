@@ -760,6 +760,11 @@ require('lazy').setup({
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
       })
+      for i, v in ipairs(ensure_installed) do
+        if v == 'volar' then
+          ensure_installed[i] = 'vue-language-server'
+        end
+      end
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
